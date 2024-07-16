@@ -6,8 +6,12 @@ public class Student extends UniMember implements StudentInterface {
     }
 
     @java.lang.Override
-    String getSubject(){
+    public String getSubject(){
         return this.subject;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + "; subject: " + subject;
+    }
 }

@@ -28,9 +28,15 @@ public class Professor extends Employee{
     public String listStaff(){
         String text = "";
         // loop over members
-        for ()
-        text = text.concat();
+        for (Employee emp: staff){
+            text = text + emp.getDescriptor() + "\n";
+        }
+
         return  text;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + "\n Staff: " + listStaff();
+    }
 }
