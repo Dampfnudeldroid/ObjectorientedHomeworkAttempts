@@ -21,8 +21,8 @@ public class Main {
         seidl.hire(olli);
         //seidl.hire(anja); // this doesn't work as Anja implements the employeeinterface but isnt an EMployee...
         seidl.hire(anja, 444);
-        // seidl.hire(rando);
-        seidl.hire(rando, 22222);
+        seidl.hire(rando);
+        //seidl.hire(rando, 22222);
         seidl.hire(achmed, 3333);
 
         System.out.print(seidl.listStaff());

@@ -1,29 +1,31 @@
-public class PhD extends Student implements EmployeeInterface{
+public class PhD extends Employee implements StudentInterface{
     // do I have to name all attributes that are inherited
-    float salary;
+    // float salary;
+    String subject;
     // ok, I kind of think that a PhD should be treated as a student, too....
     PhD(String _name, float _salary, String _subject) {
-        super(_name, _subject);
-        this.salary = _salary;
+        super(_name, _salary);
+        this.subject = _subject;
+    }
+
+    public String getSubject(){
+        return subject;
     }
 
     PhD(String _name, String _subject) {
-        super(_name, _subject);
-        this.salary = 0;
+        super(_name, 0);
+        this.subject = _subject;
     }
 
-    @java.lang.Override
-    public float getSalary() {
-        return salary;
-    }
+
 
     @Override
     public String getDescriptor() {
-        return "PhD student" + getName();
+        return "PhD student " + getName();
     }
 
     @Override
     public String toString() {
-        return super.toString() + "; salary: " + Float.toString(salary); // lets see if I can cast this way
+        return super.toString() + "; subject: " + subject; // lets see if I can cast this way
     }
 }
